@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import org.devutils.utils.FileUtilities;
 
 /**
  * @author Arunan Ramanathan
@@ -118,6 +119,34 @@ public class DevUtilsUI extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         serverPasswordTextField = new javax.swing.JPasswordField();
         saveRemoteServerButton = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        textArea1 = new java.awt.TextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        configurationProfilesListComboBox = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        configurationHostNameTextField = new javax.swing.JTextField();
+        configurationPortTextField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        configurationServiceNameTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        configurationUserNameTextField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        configurationSaveButton = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        configurationProfileNameTextField = new javax.swing.JTextField();
+        configurationErrorLabel = new javax.swing.JLabel();
+        configurationClearButton = new javax.swing.JButton();
+        configurationPasswordTextField = new javax.swing.JPasswordField();
+        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -162,7 +191,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
                         .addComponent(stopServerButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(curlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 471, Short.MAX_VALUE)))
+                        .addGap(0, 598, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         manageServersPanelLayout.setVerticalGroup(
@@ -176,7 +205,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
                         .addComponent(stopServerButton)
                         .addComponent(curlButton)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(forkServerTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
+                .addComponent(forkServerTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -267,7 +296,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
                         .addComponent(saveServerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(302, Short.MAX_VALUE))
+                .addContainerGap(460, Short.MAX_VALUE))
         );
         configureServersPanelLayout.setVerticalGroup(
             configureServersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,7 +363,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, monitorRemoteProcessDashboardPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(monitorRemoteProcessDashboardPanelLayout.createSequentialGroup()
                 .addGroup(monitorRemoteProcessDashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -506,7 +535,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
                 .addComponent(environmentInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(processInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         configureRemoteProcessPanelLayout.setVerticalGroup(
             configureRemoteProcessPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -601,7 +630,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
             .addGroup(configureRemoteServersPanelLayout.createSequentialGroup()
                 .addGap(272, 272, 272)
                 .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(313, Short.MAX_VALUE))
+                .addContainerGap(487, Short.MAX_VALUE))
         );
         configureRemoteServersPanelLayout.setVerticalGroup(
             configureRemoteServersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -627,6 +656,225 @@ public class DevUtilsUI extends javax.swing.JFrame {
         );
 
         mainTabbedPane.addTab("  Monitor remote process  ", jPanel1);
+
+        jButton1.setText("Save Sheet");
+
+        jButton2.setText("Load Sheet");
+
+        jButton3.setText("Execute Query");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Execute DB Queries", jPanel2);
+
+        jLabel3.setText("Existing Profiles                :");
+
+        configurationProfilesListComboBox.setModel(new javax.swing.DefaultComboBoxModel(FileUtilities.getProfilesNames().toArray()));
+        configurationProfilesListComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configurationProfilesListComboBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Host name                        :");
+
+        jLabel5.setText("Port                                  :");
+
+        jLabel6.setText("Service Name                  :");
+
+        jLabel7.setText("User Name                      :");
+
+        jLabel8.setText("Password                        :");
+
+        configurationSaveButton.setText(" Save");
+        configurationSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configurationSaveButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Profile name                     :");
+
+        configurationErrorLabel.setForeground(new java.awt.Color(255, 0, 51));
+
+        configurationClearButton.setText(" clear ");
+        configurationClearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configurationClearButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(configurationProfileNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(configurationUserNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(configurationServiceNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(configurationPortTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(38, 38, 38)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(configurationProfilesListComboBox, 0, 163, Short.MAX_VALUE)
+                                    .addComponent(configurationHostNameTextField)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(configurationSaveButton)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(configurationClearButton)
+                                        .addGap(102, 102, 102))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addGap(38, 38, 38)
+                                        .addComponent(configurationPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(configurationErrorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(745, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationProfilesListComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationProfileNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationHostNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationPortTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationServiceNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationUserNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(configurationPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(configurationSaveButton)
+                    .addComponent(configurationClearButton))
+                .addGap(18, 18, 18)
+                .addComponent(configurationErrorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(222, 222, 222))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1151, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Configure Database", jPanel3);
+
+        mainTabbedPane.addTab("DB Explorer", jTabbedPane1);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1151, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 686, Short.MAX_VALUE)
+        );
+
+        mainTabbedPane.addTab("REST console", jPanel5);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -837,6 +1085,61 @@ public class DevUtilsUI extends javax.swing.JFrame {
         task.execute();
     }//GEN-LAST:event_runHealthCheckButtonMouseClicked
 
+    //TODO:
+    private void configurationProfilesListComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationProfilesListComboBoxActionPerformed
+//        String selectedItem = (String) configurationProfilesListComboBox.getSelectedItem();
+//        Map mapOfItems = FileUtilities.getProfile(selectedItem);
+//        configurationProfileNameTextField.setText((String)mapOfItems.get("profilename"));
+//        configurationPortTextField.setText((String)mapOfItems.get("port"));
+//        configurationHostNameTextField.setText((String)mapOfItems.get("hostname"));
+//        configurationServiceNameTextField.setText((String)mapOfItems.get("servicename"));
+//        configurationUserNameTextField.setText((String)mapOfItems.get("username"));
+//        configurationPasswordTextField.setText((String)mapOfItems.get("password"));
+
+        //        if (selectedItem.equalsIgnoreCase("---select---")) {
+            //            configurationProfileNameTextField.setEditable(true);
+            //        } else {
+            //            configurationProfileNameTextField.setEditable(false);
+            //        }
+    }//GEN-LAST:event_configurationProfilesListComboBoxActionPerformed
+
+    private void configurationSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationSaveButtonActionPerformed
+        configurationErrorLabel.setText("");
+
+        String profileName = configurationProfileNameTextField.getText().trim();
+        String portNumber = configurationPortTextField.getText().trim();
+        String hostName = configurationHostNameTextField.getText().trim();
+        String serviceName = configurationServiceNameTextField.getText().trim();
+        String userName = configurationUserNameTextField.getText().trim();
+        String password = configurationPasswordTextField.getText().trim();
+
+        if (profileName.length()==0 || portNumber.length()==0 || hostName.length()==0
+            || serviceName.length()==0 || userName.length()==0 || password.length() ==0) {
+            configurationErrorLabel.setText("All fields are mandatory");
+            return;
+        }
+        //FileUtilities.addNode(profileName, hostName, portNumber, serviceName, userName, password);
+        //TODO:
+//        configurationProfilesListComboBox.setModel(new javax.swing.DefaultComboBoxModel(FileUtilities.getProfilesNames().toArray()));
+
+        configurationProfileNameTextField.setText("");
+        configurationPortTextField.setText("");
+        configurationHostNameTextField.setText("");
+        configurationServiceNameTextField.setText("");
+        configurationUserNameTextField.setText("");
+        configurationPasswordTextField.setText("");
+    }//GEN-LAST:event_configurationSaveButtonActionPerformed
+
+    private void configurationClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationClearButtonActionPerformed
+        configurationProfileNameTextField.setText("");
+        configurationPortTextField.setText("");
+        configurationHostNameTextField.setText("");
+        configurationServiceNameTextField.setText("");
+        configurationUserNameTextField.setText("");
+        configurationPasswordTextField.setText("");
+        configurationProfilesListComboBox.setSelectedIndex(0);
+    }//GEN-LAST:event_configurationClearButtonActionPerformed
+
     private void loadServerNameComboBoxs() {
         List<String> listOfServerNames = XMLPropertyUtility.getServerNames();
 
@@ -943,6 +1246,16 @@ public class DevUtilsUI extends javax.swing.JFrame {
     private javax.swing.JButton clearProcessButton;
     private javax.swing.JLabel commandToExecuteLabel;
     private javax.swing.JTextField commandToExecuteTextField;
+    private javax.swing.JButton configurationClearButton;
+    public static javax.swing.JLabel configurationErrorLabel;
+    private javax.swing.JTextField configurationHostNameTextField;
+    private javax.swing.JPasswordField configurationPasswordTextField;
+    private javax.swing.JTextField configurationPortTextField;
+    private javax.swing.JTextField configurationProfileNameTextField;
+    private javax.swing.JComboBox configurationProfilesListComboBox;
+    private javax.swing.JButton configurationSaveButton;
+    private javax.swing.JTextField configurationServiceNameTextField;
+    private javax.swing.JTextField configurationUserNameTextField;
     private javax.swing.JPanel configureRemoteProcessPanel;
     private javax.swing.JPanel configureRemoteServersPanel;
     private javax.swing.JPanel configureServersPanel;
@@ -959,12 +1272,29 @@ public class DevUtilsUI extends javax.swing.JFrame {
     public static javax.swing.JTabbedPane forkServerTabbedPane;
     private javax.swing.JLabel hostNameLabel;
     private javax.swing.JTextField hostNameTextField;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     public static javax.swing.JComboBox listEnvironmentComboBox;
     private javax.swing.JLabel listEnvironmentLabel;
     private javax.swing.JComboBox listServerComboBox;
@@ -997,6 +1327,7 @@ public class DevUtilsUI extends javax.swing.JFrame {
     private javax.swing.JButton startServerButton;
     private javax.swing.JTabbedPane startStopServersTabbedPane;
     private javax.swing.JButton stopServerButton;
+    private java.awt.TextArea textArea1;
     public static javax.swing.JComboBox typeOfServerComboBox;
     private javax.swing.JLabel typeOfServerLabel;
     private javax.swing.JTextField userNameTextField;

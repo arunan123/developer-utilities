@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+
+<server name="cart-service">
+    <type>PlayServer</type>
+    <port>9001</port>
+    <directory>D:\dev\workspace\Development\ChinaGlobal\shaklee-shopping-cart</directory>
+    <command>activator -Dhttp.port=9001 -jvm-debug 9908 -Deureka.name=cart-service -Deureka.port=9001 -Dcoordination-service.connectionString="localhost:2181" run</command>
+  </server>
+<server name="zookeeper">
+    <type>Zookeeper</type>
+    <port>2181</port>
+    <directory>D:\apps\zookeeper-3.4.6\bin</directory>
+    <command>zkServer.cmd</command>
+  </server>
+<server name="Eureka">
+    <type>Tomcat</type>
+    <port>8080</port>
+    <directory>D:\apps\Eureka tomcat\tomcat 8\bin</directory>
+    <command>startup.bat</command>
+  </server>
+<server name="auth-service">
+    <type>PlayServer</type>
+    <port>9002</port>
+    <directory>D:\dev\workspace\Development\ChinaGlobal\shaklee-auth-server</directory>
+    <command>activator -Dhttp.port=9002 -Deureka.name=oauth-service -Deureka.port=9002 -Dcoordination-service.connectionString="localhost:2181" run</command>
+  </server>
+</servers>
